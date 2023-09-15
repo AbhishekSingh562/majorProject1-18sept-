@@ -4,18 +4,18 @@
   box-sizing: border-box;
 }
 body {
-  background: rgb(141, 217, 141);
+  background: rgb(96, 184, 96);
 }
 
 .upper-box {
   border: 5px solid #fff;
-  width: 60%;
+  width: 1000px;
   height: 200px;
   border-radius: 25px;
   display: flex;
-  justify-content: space-between;
-  margin-top: 100px;
-  margin-left: 25%;
+  justify-content: space-around;
+  margin-top: 5vh;
+  margin-left: 23vw;
   color: #fff;
   font-size: 50px;
   padding-top: 10px;
@@ -23,28 +23,84 @@ body {
 
 .computer-box {
   background: #fff;
-  color: #333;
+  color: gray;
   font-size: 25px;
   margin-bottom: 35px;
   border-radius: 10px;
   justify-content: center;
   align-items: center;
   padding: 10px;
+  margin-left: 10vw;
 }
 
 .your-box {
   background: #fff;
-  color: #333;
+  color: gray;
   font-size: 25px;
   margin-bottom: 35px;
   border-radius: 10px;
-  padding: 20px;
+  padding: 10px 35px;
 }
 
 .computer-score,
 .your-score {
   font-size: 70px;
+  color: rgb(37, 36, 36);
+  font-weight: bolder;
+}
+
+.rock {
+  background: #fff;
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  border: 20px solid #0074b6;
+  display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: bolder;
+  margin-right: 200px;
+}
+
+.scissor {
+  background: #fff;
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  border: 20px solid #ffa943;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.paper {
+  background: #fff;
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  border: 20px solid #bd00ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upper-images {
+  display: flex;
+  justify-content: center;
+  margin-top: 75px;
+}
+.lower-images {
+  display: flex;
+  justify-content: center;
+  margin-top: 75px;
+}
+.rule-btn {
+  padding: 15px 30px;
+  background: rgb(96, 184, 96);
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 15px;
+  position: absolute;
+  left: 89%;
+  bottom: 3%;
 }
