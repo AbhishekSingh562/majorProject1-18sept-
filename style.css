@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: rgb(141, 217, 141);
+}
+
+.upper-box {
+  border: 5px solid #fff;
+  width: 60%;
+  height: 200px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  margin-left: 25%;
+  color: #fff;
+  font-size: 50px;
+  padding-top: 10px;
+}
+
+.computer-box {
+  background: #fff;
+  color: #333;
+  font-size: 25px;
+  margin-bottom: 35px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.your-box {
+  background: #fff;
+  color: #333;
+  font-size: 25px;
+  margin-bottom: 35px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.computer-score,
+.your-score {
+  font-size: 70px;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+}
