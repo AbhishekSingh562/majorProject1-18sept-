@@ -30,9 +30,28 @@ document.addEventListener("DOMContentLoaded", function () {
     container2.style.display = "none";
     container1.style.display = "block";
   });
-});
 
-let res = "";
+  const rock = document.querySelector(".rock");
+  const paper = document.querySelector(".paper");
+  const scissor = document.querySelector(".scissor");
+
+  rock.addEventListener("click", () => {
+    container1.style.display = "none";
+    container2.style.display = "block";
+  });
+  paper.addEventListener("click", () => {
+    container1.style.display = "none";
+    container2.style.display = "block";
+  });
+  scissor.addEventListener("click", () => {
+    container1.style.display = "none";
+    container2.style.display = "block";
+  });
+
+  ///jhdgfwhf
+  if (score.your === "You win") {
+  }
+});
 
 const score = JSON.parse(localStorage.getItem("score")) || {
   your: 0,
@@ -61,26 +80,35 @@ function playGame(playerMove) {
   if (playerMove === "scissor") {
     if (computerMove === "rock") {
       result = "You lose";
+      document.querySelector(".display-result").textContent = result;
     } else if (computerMove === "paper") {
       result = "You win";
+      document.querySelector(".display-result").textContent = result;
     } else if (computerMove === "scissor") {
-      result = "Tie";
+      result = "Game Tie";
+      document.querySelector(".display-result").textContent = result;
     }
   } else if (playerMove === "paper") {
     if (computerMove === "rock") {
       result = "You win";
+      document.querySelector(".display-result").textContent = result;
     } else if (computerMove === "paper") {
-      result = "Tie";
+      result = "Game Tie";
+      document.querySelector(".display-result").textContent = result;
     } else if (computerMove === "scissor") {
       result = "You lose";
+      document.querySelector(".display-result").textContent = result;
     }
   } else if (playerMove === "rock") {
     if (computerMove === "rock") {
-      result = "Tie";
+      result = "Game Tie";
+      document.querySelector(".display-result").textContent = result;
     } else if (computerMove === "paper") {
       result = "You lose";
+      document.querySelector(".display-result").textContent = result;
     } else if (computerMove === "scissor") {
       result = "You win";
+      document.querySelector(".display-result").textContent = result;
     }
   }
 
@@ -96,5 +124,4 @@ function playGame(playerMove) {
   computerScoreElement.textContent = score.computer;
 
   localStorage.setItem("score", JSON.stringify(score));
-  res = result;
 }

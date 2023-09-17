@@ -72,6 +72,13 @@ body {
   border: 15px solid #bd00ff;
   margin-right: 0;
 }
+.rock:hover,
+.scissor:hover,
+.paper:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  filter: brightness(1.5);
+}
 .upper-images {
   display: flex;
   justify-content: center;
@@ -184,6 +191,7 @@ body {
 
 .container2 {
   margin-top: 50px;
+  display: none;
 }
 
 .container2-img {
@@ -254,6 +262,7 @@ body {
   margin-left: 250px;
   color: white;
 }
-.container1 {
+
+.container {
   display: none;
 }
