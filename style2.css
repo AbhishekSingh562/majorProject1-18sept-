@@ -8,7 +8,7 @@ body {
 }
 .upper-box {
   border: 5px solid #fff;
-  width: 50rem;
+  width: 70%;
   height: 180px;
   border-radius: 25px;
   display: flex;
@@ -117,28 +117,33 @@ body {
   rotate: 50deg;
 }
 .rule-btn {
-  padding: 12px 24px;
+  padding: 7px 14px;
   background: rgb(96, 184, 96);
-  font-size: 25px;
+  font-size: 16px;
   font-weight: bold;
   color: #fff;
   border: 3px solid #fff;
   border-radius: 15px;
   position: absolute;
-  left: 86%;
+  left: 88%;
   bottom: 2%;
   z-index: 2;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.rule-btn:hover {
+  background: white;
+  color: gray;
 }
 .rule-box {
   position: absolute;
   background: rgb(0, 68, 41);
   width: 280px;
-  height: 320px;
+  height: 300px;
   top: 42vh;
-  left: 78vw;
+  left: 76vw;
   border-radius: 20px;
   border: 8px solid #fff;
-  font-size: 15px;
+  font-size: 14px;
   color: #fff;
   padding-top: 2%;
   padding-left: 1%;
@@ -160,16 +165,19 @@ body {
   height: 10px;
   background-color: yellow;
 }
+.rule-heading {
+  margin-left: 79px;
+}
 .cross-btn {
-  font-size: 50px;
+  font-size: 40px;
   color: #fff;
   background: red;
   position: absolute;
   border: 7px solid #fff;
-  border-radius: 40px;
-  width: 75px;
-  height: 75px;
+  border-radius: 30px;
+  width: 60px;
+  height: 60px;
   z-index: 2;
-  left: 15vw;
+  left: 17.5vw;
   top: -6vh;
 }

@@ -14,24 +14,25 @@
       ROCK<br>PAPER<br>SCISSORS
       <div class="computer-box">
         COMPUTER<br>SCORE
-        <div class="computer-score">0</div>
+        <div class="computer-score" id="computer-score"></div>
       </div>
       <div class="your-box">YOUR<br>SCORE
-        <div class="your-score">0</div>
+        <div class="your-score" id="your-score"></div>
       </div>
     </div>
     <div class="container1">
       <div class="images">
         <div class="upper-images">
 
-          <div class="rock"><img src="images/rock.png"></div>
+          <div class="rock"><img src="images/rock.png" alt="Clickable Image" onclick="playGame('rock')"></div>
           <div class="line"></div>
-          <div class="scissor"><img src="images/scissor.png"></div>
+          <div class="scissor"><img src="images/scissor.png" onclick="playGame('scissor')"
+              onclick="playGame('scissor')"></div>
           <div class="line1"></div>
         </div>
         <div class="lower-images">
           <div class="line2"></div>
-          <div class="paper"><img src="images/paper.png"></div>
+          <div class="paper"><img src="images/paper.png" alt="Clickable Image" onclick="playGame('paper')"></div>
         </div>
       </div>
     </div>
@@ -45,6 +46,7 @@
     <div class="rectange"></div>If both players lay down the same hand, each player lays down another hand
   </div> -->
     <div class="rule-box">
+      <div class="rule-heading">Game Rules</div>
       <div class="bullet">Rock beats scissors, scissors beat paper, and paper beats rock.</div>
       <div class="bullet">Agree ahead of time whether you'll count off “rock, paper, scissors, shoot” or just “rock,
         paper, scissors.”</div>
