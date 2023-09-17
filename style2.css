@@ -45,10 +45,10 @@ body {
   font-size: 60px;
   color: rgb(37, 36, 36);
   font-weight: bolder;
-  margin-left: 25%;
+  margin-left: 15px;
 }
 .computer-score {
-  margin-left: 38%;
+  margin-left: 40px;
 }
 
 .rock,
