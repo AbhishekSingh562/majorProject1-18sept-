@@ -21,6 +21,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   yourScoreElement.textContent = score.your;
   computerScoreElement.textContent = score.computer;
+
+  const replayButton = document.querySelector(".display button");
+  const container1 = document.querySelector(".container1");
+  const container2 = document.querySelector(".container2");
+
+  replayButton.addEventListener("click", () => {
+    container2.style.display = "none";
+    container1.style.display = "block";
+  });
 });
 
 let res = "";
@@ -89,5 +98,3 @@ function playGame(playerMove) {
   localStorage.setItem("score", JSON.stringify(score));
   res = result;
 }
-
-console.log(res);
