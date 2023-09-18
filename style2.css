@@ -263,6 +263,55 @@ body {
   color: white;
 }
 
-.container {
+.container3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* dkfdlkwds */
+
+.container3 {
+  position: relative;
+}
+
+.group-star {
+  position: relative;
+  margin-top: 30px;
+}
+
+.vector {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  margin-top: 0px;
+}
+.hurray {
+  font-size: 50px;
+  margin-top: 40px;
+  color: white;
+  font-weight: bolder;
+}
+.last-line {
+  font-size: 30px;
+  margin-top: 18px;
+  color: white;
+  font-weight: bolder;
+}
+.container3 button {
+  margin-top: 25px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  outline: 0;
+  border: 0;
+}
+
+.container3 button:hover {
+  border: 1px solid white;
+  background: rgb(96, 184, 96);
+}
+.container3 {
   display: none;
 }
