@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   playAgainButtom.addEventListener("click", () => {
     hurrayPage.style.display = "none";
+    container2.style.display = "none";
     container1.style.display = "block";
     container.style.display = "block";
   });
