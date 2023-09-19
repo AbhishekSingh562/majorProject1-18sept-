@@ -263,15 +263,14 @@ body {
   color: white;
 }
 
-.container3 {
+.hurray-page {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-/* dkfdlkwds */
 
-.container3 {
+.hurray-page {
   position: relative;
 }
 
@@ -300,7 +299,7 @@ body {
   color: white;
   font-weight: bolder;
 }
-.container3 button {
+.hurray-page button {
   margin-top: 25px;
   padding: 8px 12px;
   border-radius: 8px;
@@ -312,6 +311,6 @@ body {
   border: 1px solid white;
   background: rgb(96, 184, 96);
 }
-.container {
+.hurray-page {
   display: none;
 }

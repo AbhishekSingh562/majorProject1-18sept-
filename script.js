@@ -2,12 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const ruleButton = document.querySelector(".rule-btn");
   const ruleBox = document.querySelector(".rule-box");
   const crossButton = document.querySelector(".cross-btn");
-  const nextBtn = document.querySelector(".next-btn");
-
-  function hideNextButton() {
-    nextBtn.style.display = "none";
-  }
-  hideNextButton();
 
   hideRuleBox();
   function hideRuleBox() {
@@ -40,17 +34,24 @@ document.addEventListener("DOMContentLoaded", function () {
   const paper = document.querySelector(".paper");
   const scissor = document.querySelector(".scissor");
 
+  //showing you-picked
   rock.addEventListener("click", () => {
     container1.style.display = "none";
     container2.style.display = "block";
+    document.getElementById("your-move").innerHTML =
+      '<img src="images/rock.png">';
   });
   paper.addEventListener("click", () => {
     container1.style.display = "none";
     container2.style.display = "block";
+    document.getElementById("your-move").innerHTML =
+      '<img src="images/paper.png">';
   });
   scissor.addEventListener("click", () => {
     container1.style.display = "none";
     container2.style.display = "block";
+    document.getElementById("your-move").innerHTML =
+      '<img src="images/scissor.png">';
   });
 });
 
@@ -59,11 +60,6 @@ const score = JSON.parse(localStorage.getItem("score")) || {
   your: 0,
   computer: 0,
 };
-const showNextBtn = document.querySelector(".show-btn");
-
-function showNextButton() {
-  nextBtn.style.display = "block";
-}
 
 function pickComputerMove() {
   const randomNumber = Math.random();
@@ -79,15 +75,18 @@ function pickComputerMove() {
   return computerMove;
 }
 
-function updateComputerMove(move) {
-  const computerMoveElement = document.getElementById("computer-move");
-  computerMoveElement.innerHTML = `<img src="images/${move}.png">`;
-}
+// function updateComputerMove(move) {
+//   const computerMoveElement = document.getElementById("computer-move");
+//   computerMoveElement.innerHTML = `<img src="images/${move}.png">`;
+// }
 
 function playGame(playerMove) {
   console.log("playgame function");
   const computerMove = pickComputerMove();
-  updateComputerMove(computerMove);
+  const computerMoveElement = document.getElementById("computer-move");
+  computerMoveElement.innerHTML = `<img src="images/${computerMove}.png">`;
+
+  // updateComputerMove(computerMove);
 
   let result = "";
 
@@ -128,7 +127,6 @@ function playGame(playerMove) {
 
   if (result === "You win") {
     score.your++;
-    showNextButton();
   } else if (result === "You lose") {
     score.computer++;
   }
