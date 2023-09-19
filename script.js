@@ -3,8 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const ruleBox = document.querySelector(".rule-box");
   const crossButton = document.querySelector(".cross-btn");
 
-  ruleBox.style.display = "none";
-
+  hideRuleBox();
   function hideRuleBox() {
     ruleBox.style.display = "none";
   }
@@ -35,37 +34,38 @@ document.addEventListener("DOMContentLoaded", function () {
   const paper = document.querySelector(".paper");
   const scissor = document.querySelector(".scissor");
 
-  function updateComputerMove(move) {
-    const computerMoveElement = document.getElementById("computer-move");
-    computerMoveElement.innerHTML = `<img src="images/${move}.png">`;
-  }
+  // function updateComputerMove(move) {
+  //   const computerMoveElement = document.getElementById("computer-move");
+  //   computerMoveElement.innerHTML = `<img src="images/${move}.png">`;
+  // }
 
   rock.addEventListener("click", () => {
     container1.style.display = "none";
     container2.style.display = "block";
     document.getElementById("your-move").innerHTML =
       '<img src="images/rock.png">';
-    const computerMove = pickComputerMove();
-    updateComputerMove(computerMove);
+    // const computerMove = pickComputerMove();
+    // updateComputerMove(computerMove);
   });
   paper.addEventListener("click", () => {
     container1.style.display = "none";
     container2.style.display = "block";
     document.getElementById("your-move").innerHTML =
       '<img src="images/paper.png">';
-    const computerMove = pickComputerMove();
-    updateComputerMove(computerMove);
+    // const computerMove = pickComputerMove();
+    // updateComputerMove(computerMove);
   });
   scissor.addEventListener("click", () => {
     container1.style.display = "none";
     container2.style.display = "block";
     document.getElementById("your-move").innerHTML =
       '<img src="images/scissor.png">';
-    const computerMove = pickComputerMove();
-    updateComputerMove(computerMove);
+    // const computerMove = pickComputerMove();
+    // updateComputerMove(computerMove);
   });
 });
 
+//after dom content load !!
 const score = JSON.parse(localStorage.getItem("score")) || {
   your: 0,
   computer: 0,
@@ -85,9 +85,16 @@ function pickComputerMove() {
   return computerMove;
 }
 
+function updateComputerMove(move) {
+  const computerMoveElement = document.getElementById("computer-move");
+  computerMoveElement.innerHTML = `<img src="images/${move}.png">`;
+}
+
 function playGame(playerMove) {
   console.log("playgame function");
   const computerMove = pickComputerMove();
+  updateComputerMove(computerMove);
+
   let result = "";
 
   if (playerMove === "scissor") {
@@ -130,6 +137,8 @@ function playGame(playerMove) {
   } else if (result === "You lose") {
     score.computer++;
   }
+
+  //score updations
   const yourScoreElement = document.querySelector(".your-score");
   const computerScoreElement = document.querySelector(".computer-score");
 
