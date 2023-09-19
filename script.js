@@ -2,6 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const ruleButton = document.querySelector(".rule-btn");
   const ruleBox = document.querySelector(".rule-box");
   const crossButton = document.querySelector(".cross-btn");
+  const nextBtn = document.querySelector(".next-btn");
+
+  function hideNextButton() {
+    nextBtn.style.display = "none";
+  }
+  hideNextButton();
 
   hideRuleBox();
   function hideRuleBox() {
@@ -70,6 +76,11 @@ const score = JSON.parse(localStorage.getItem("score")) || {
   your: 0,
   computer: 0,
 };
+const showNextBtn = document.querySelector(".show-btn");
+
+function showNextButton() {
+  nextBtn.style.display = "block";
+}
 
 function pickComputerMove() {
   const randomNumber = Math.random();
@@ -134,6 +145,7 @@ function playGame(playerMove) {
 
   if (result === "You win") {
     score.your++;
+    showNextButton();
   } else if (result === "You lose") {
     score.computer++;
   }
