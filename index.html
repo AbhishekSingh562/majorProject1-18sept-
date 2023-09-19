@@ -11,28 +11,30 @@
 
 <body>
   <div class="container">
-    <div class="upper-box">
-      ROCK<br>PAPER<br>SCISSORS
-      <div class="computer-box">
-        COMPUTER<br>SCORE
-        <div class="computer-score" id="computer-score"></div>
-      </div>
-      <div class="your-box">YOUR<br>SCORE
-        <div class="your-score" id="your-score"></div>
-      </div>
-    </div>
-    <div class="container1">
-      <div class="images">
-        <div class="upper-images">
-
-          <div class="rock"><img src="images/rock.png" alt="Clickable Image" onclick="playGame('rock')"></div>
-          <div class="line"></div>
-          <div class="scissor"><img src="images/scissor.png" onclick="playGame('scissor')"></div>
-          <div class="line1"></div>
+    <div class="first-page">
+      <div class="upper-box">
+        ROCK<br>PAPER<br>SCISSORS
+        <div class="computer-box">
+          COMPUTER<br>SCORE
+          <div class="computer-score" id="computer-score"></div>
         </div>
-        <div class="lower-images">
-          <div class="line2"></div>
-          <div class="paper"><img src="images/paper.png" alt="Clickable Image" onclick="playGame('paper')"></div>
+        <div class="your-box">YOUR<br>SCORE
+          <div class="your-score" id="your-score"></div>
+        </div>
+      </div>
+      <div class="container1">
+        <div class="images">
+          <div class="upper-images">
+
+            <div class="rock"><img src="images/rock.png" alt="Clickable Image" onclick="playGame('rock')"></div>
+            <div class="line"></div>
+            <div class="scissor"><img src="images/scissor.png" onclick="playGame('scissor')"></div>
+            <div class="line1"></div>
+          </div>
+          <div class="lower-images">
+            <div class="line2"></div>
+            <div class="paper"><img src="images/paper.png" alt="Clickable Image" onclick="playGame('paper')"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -62,7 +64,7 @@
       <button class="cross-btn">X</button>
     </div>
   </div>
-  <div class="hurray-page">
+  <div class="hurray-page" id="hurray-page">
     <div class="group-star"><img src="images/Group 5Stars.png"></div>
     <div class="vector"><img src="images/VectorTrophy.png"></div>
     <div class="hurray">HURRAY!!!</div>

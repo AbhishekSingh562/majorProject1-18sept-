@@ -2,6 +2,25 @@ document.addEventListener("DOMContentLoaded", function () {
   const ruleButton = document.querySelector(".rule-btn");
   const ruleBox = document.querySelector(".rule-box");
   const crossButton = document.querySelector(".cross-btn");
+  const hurrayPage = document.getElementById("hurray-page");
+  const nextButton = document.querySelector(".next-btn");
+  const container = document.querySelector(".container");
+  // const firstPage = document.querySelector(".first-page");
+  const playAgainButtom = document.querySelector(".hurray-page button");
+
+  playAgainButtom.addEventListener("click", () => {
+    hurrayPage.style.display = "none";
+    container1.style.display = "block";
+    container.style.display = "block";
+  });
+
+  nextButton.addEventListener("click", () => {
+    // Hide container1 and container2
+    container.style.display = "none";
+
+    // Show the hurray-page
+    hurrayPage.style.display = "block";
+  });
 
   hideRuleBox();
   function hideRuleBox() {
@@ -67,7 +86,7 @@ function pickComputerMove() {
 
   if (randomNumber >= 0 && randomNumber < 1 / 3) {
     computerMove = "rock";
-  } else if (randomNumber >= 1 / 3 && randomNumber <= 2 / 3) {
+  } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
     computerMove = "paper";
   } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
     computerMove = "scissor";
@@ -127,8 +146,15 @@ function playGame(playerMove) {
 
   if (result === "You win") {
     score.your++;
+    const nextButton = document.querySelector(".next-btn");
+    nextButton.style.display = "block";
   } else if (result === "You lose") {
     score.computer++;
+    const nextButton = document.querySelector(".next-btn");
+    nextButton.style.display = "none";
+  } else if (result === "Game Tie") {
+    const nextButton = document.querySelector(".next-btn");
+    nextButton.style.display = "none";
   }
 
   //score updations

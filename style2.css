@@ -264,14 +264,10 @@ body {
 }
 
 .hurray-page {
-  display: flex;
+  display: flex!;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.hurray-page {
-  position: relative;
 }
 
 .group-star {
@@ -308,9 +304,13 @@ body {
 }
 
 .hurray-page button:hover {
-  border: 1px solid white;
+  border: 1px solid white!;
   background: rgb(96, 184, 96);
 }
 .hurray-page {
   display: none;
 }
+
+/* .container {
+  display: none;
+} */
