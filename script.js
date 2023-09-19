@@ -16,10 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   nextButton.addEventListener("click", () => {
-    // Hide container1 and container2
     container.style.display = "none";
-
-    // Show the hurray-page
     hurrayPage.style.display = "flex";
   });
 
