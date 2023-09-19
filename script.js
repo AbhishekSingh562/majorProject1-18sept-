@@ -165,4 +165,5 @@ function playGame(playerMove) {
   computerScoreElement.textContent = score.computer;
 
   localStorage.setItem("score", JSON.stringify(score));
+  result = "";
 }
