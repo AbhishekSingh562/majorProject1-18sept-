@@ -40,34 +40,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const paper = document.querySelector(".paper");
   const scissor = document.querySelector(".scissor");
 
-  // function updateComputerMove(move) {
-  //   const computerMoveElement = document.getElementById("computer-move");
-  //   computerMoveElement.innerHTML = `<img src="images/${move}.png">`;
-  // }
-
   rock.addEventListener("click", () => {
     container1.style.display = "none";
     container2.style.display = "block";
-    document.getElementById("your-move").innerHTML =
-      '<img src="images/rock.png">';
-    // const computerMove = pickComputerMove();
-    // updateComputerMove(computerMove);
   });
   paper.addEventListener("click", () => {
     container1.style.display = "none";
     container2.style.display = "block";
-    document.getElementById("your-move").innerHTML =
-      '<img src="images/paper.png">';
-    // const computerMove = pickComputerMove();
-    // updateComputerMove(computerMove);
   });
   scissor.addEventListener("click", () => {
     container1.style.display = "none";
     container2.style.display = "block";
-    document.getElementById("your-move").innerHTML =
-      '<img src="images/scissor.png">';
-    // const computerMove = pickComputerMove();
-    // updateComputerMove(computerMove);
   });
 });
 

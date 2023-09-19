@@ -308,10 +308,10 @@ body {
   border: 0;
 }
 
-.container3 button:hover {
+.hurray-page button:hover {
   border: 1px solid white;
   background: rgb(96, 184, 96);
 }
-.hurray-page {
+.container {
   display: none;
 }
