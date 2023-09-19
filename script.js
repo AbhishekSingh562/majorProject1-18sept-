@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     container.style.display = "none";
 
     // Show the hurray-page
-    hurrayPage.style.display = "block";
+    hurrayPage.style.display = "flex";
   });
 
   hideRuleBox();
